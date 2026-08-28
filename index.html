@@ -222,7 +222,12 @@ summary.case-head:focus-visible{outline:2px solid var(--gold);outline-offset:6px
 .curric p{font-size:13px;color:var(--gray);word-break:keep-all}
 .curric .tools{margin-top:7px;display:flex;flex-wrap:wrap;gap:6px}
 .curric .tools span{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:100px;padding:2px 9px;font-size:11px;font-weight:700;line-height:1.6}
-@media(max-width:600px){.curric li{grid-template-columns:24px 1fr;gap:9px}}
+.curric .dot{padding-top:9px}
+.curric .dot::before{content:"";display:block;width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.cc-group{margin-top:22px}
+.cc-group:first-of-type{margin-top:0}
+.cc-group > .g{font-size:12.5px;font-weight:700;color:var(--sky);margin-bottom:12px;word-break:keep-all}
+@media(max-width:600px){.curric li{grid-template-columns:22px 1fr;gap:9px}}
 @keyframes caseOpen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 .case[open] .case-inner{animation:caseOpen .3s ease}
 @media(prefers-reduced-motion:reduce){.case[open] .case-inner{animation:none}}
@@ -785,7 +790,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
     <details class="case reveal">
       <summary class="case-head">
         <div><div class="case-no">CASE 9</div><h3>온라인 AI 기초 과정</h3><p class="sub">강의 영상을 직접 촬영해 제작, 다수 기수 평가·피드백까지 운영</p></div>
-        <div class="meta"><span>고용노동부 사업</span><span>AI 스마트 워크 모듈</span><span>영상 촬영</span><span>다수 기수</span><span>온라인</span><span>평가·피드백 운영</span></div>
+        <div class="meta"><span>고용노동부 사업</span><span>담당 17차시</span><span>영상 촬영</span><span>다수 기수</span><span>온라인</span><span>평가·피드백 운영</span></div>
         <span class="case-more"><b class="o">자세히 보기</b><b class="c">접기</b></span>
       </summary>
       <div class="case-inner">
@@ -795,13 +800,30 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
           <div class="rail">
             <div class="step s1"><div class="lab">특이점</div><p>고용노동부·한국산업인력공단이 주관하고 KG에듀원이 운영하는 디지털 원격훈련 아카이브 사업의 AI 분야 콘텐츠. 강의를 사전에 영상으로 촬영해 제공하는 온라인 과정. 현장처럼 반응을 보며 조정할 수 없고, 여러 기수가 같은 영상을 수강하므로 촬영 시점에 내용과 전달이 완결돼 있어야 하는 조건. 반면 과제 완성도는 기수마다 달라 평가와 피드백은 매 기수 새로 운영해야 함.</p></div>
             <div class="step s2"><div class="lab">대처</div><p>촬영 전에 구성과 실습 순서를 확정해, 한 번의 촬영으로 여러 기수가 재사용할 수 있는 강의 영상을 직접 제작. 평가는 별도 축으로 분리해 과제 유형별 기준을 사전에 문서화하고, 반복되는 피드백 패턴을 정리해 개별 코멘트에 재활용하는 체계를 구축.</p></div>
-            <div class="step s3"><div class="lab">결과물</div><p>기수가 바뀌어도 그대로 재사용되는 영상 강의 콘텐츠 확보. 여기에 일관된 평가 기준과 수강생별 상세 피드백을 결합해, 사전 제작 영상 과정에서도 개별 지도가 이뤄지도록 구성.</p></div>
+            <div class="step s3"><div class="lab">결과물</div><p>'AI시대 꼭 알아야하는 IT이해' 10차시와 'AI 스마트 워크' 7차시, 총 17개 차시를 직접 촬영·제작. 기수가 바뀌어도 그대로 재사용되는 영상 강의 콘텐츠 확보. 여기에 일관된 평가 기준과 수강생별 상세 피드백을 결합해, 사전 제작 영상 과정에서도 개별 지도가 이뤄지도록 구성.</p></div>
           </div>
         </div>
         <div class="case-curric">
           <div class="cc-lab">담당 차시</div>
-          <div class="cc-sub">M2. AI 스마트 워크 · 기본 3차시 + 확장 4차시</div>
-          <ul class="curric">
+          <div class="cc-sub">직접 촬영·제작한 17개 차시</div>
+          <div class="cc-group">
+            <div class="g">AI시대 꼭 알아야하는 IT이해 · 10차시</div>
+            <ul class="curric">
+              <li><span class="dot"></span><div><b>생성형 AI는 어떻게 작동할까</b><p>생성형 AI(LLM) 동작 원리: 학습·추론 개념 · AI 리터러시 개념: AI를 비판적으로 활용하는 능력 · 할루시네이션(환각) 개념과 검증 방법</p></div></li>
+              <li><span class="dot"></span><div><b>생성형 AI는 어디에 연결될까</b><p>AI가 문서·이메일·PPT·엑셀에 연결되는 방식 · '회의 녹취 → AI 요약 → 회의록' 자동 워크플로 · 직무별 AI 활용 사례(인사·영업·재무·CS)</p></div></li>
+              <li><span class="dot"></span><div><b>기업의 AI 도입 구조 이해</b><p>기업 AI 도입 단계(파일럿→부분도입→전사) · AI 도입 구조 3층: 데이터·AI모델·서비스 레이어 · 직접 개발 vs SaaS AI 구독 비용·리스크 비교</p></div></li>
+              <li><span class="dot"></span><div><b>노코드·로우코드 이해</b><p>노코드 개념: 코딩 없이 앱·자동화 제작 · 대표 노코드 툴(Notion 자동화·Zapier·구글 앱스크립트) · 노코드 vs 로우코드 차이 및 적합 상황</p></div></li>
+              <li><span class="dot"></span><div><b>업무 자동화의 기본 개념</b><p>자동화 3요소: 트리거·조건·액션 · 직장인 반복 업무 중 자동화 가능 항목 탐색 · 자동화 ROI 개념: 구축 시간 vs 절감 시간</p></div></li>
+              <li><span class="dot"></span><div><b>자동화 도입 시 고려사항</b><p>자동화 실패 사례: 예외 처리 부재·보안 허점 · 자동화 도입 전 체크리스트(데이터 품질·담당자·롤백) · 자동화 이후 업무자의 역할 변화</p></div></li>
+              <li><span class="dot"></span><div><b>자동화 툴은 어떻게 다를까</b><p>RPA·노코드·AI 자동화 3유형 분류 및 차이 · 동일 업무를 세 도구로 구현하면 어떻게 다른가 · 도구 선택 기준(비용·기술수준·보안·확장성)</p></div></li>
+              <li><span class="dot"></span><div><b>클라우드는 왜 사용한 만큼 비용을 낼까</b><p>클라우드 종량제(Pay-as-you-go) 개념 · 스토리지·컴퓨팅·트래픽 항목별 요금 구조 · 온프레미스(서버 직접 구매) vs 클라우드 비용 비교</p></div></li>
+              <li><span class="dot"></span><div><b>회사 데이터는 어떻게 보호될까</b><p>데이터 보안 3원칙(기밀성·무결성·가용성) · 3-2-1 백업 규칙과 랜섬웨어 대응 · 개인정보보호법·사내 보안 규정 직원 준수사항</p></div></li>
+              <li><span class="dot"></span><div><b>AI 시대 디지털 업무 방식 변화</b><p>1~19차시 핵심 개념 총정리 · AI·자동화·클라우드가 만드는 업무 변화 방향 · 내 직무의 5년 후 변화 예측 및 준비 방향</p></div></li>
+            </ul>
+          </div>
+          <div class="cc-group">
+            <div class="g">M2. AI 스마트 워크 · 기본 3차시 + 확장 4차시</div>
+            <ul class="curric">
             <li><span class="n">07</span><div><b>내 PC의 똑똑한 서재: 수만 장의 PDF 한눈에 파악하기<span class="tier">기본</span></b><p>NotebookLM에 사내 규정, 매뉴얼을 넣고 필요한 정보만 즉시 찾아내기</p><div class="tools"><span>NotebookLM</span></div></div></li>
             <li><span class="n">08</span><div><b>틀린 그림 찾기: 수십 장의 보고서 차이점 10초 분석<span class="tier">기본</span></b><p>신구 대조표 작성 없이, 두 문서의 변경 사항과 핵심 이슈를 자동 비교</p><div class="tools"><span>NotebookLM</span><span>Claude</span></div></div></li>
             <li><span class="n">09</span><div><b>줄글의 마법: 뒤섞인 업무 메모를 깔끔한 표로 변환<span class="tier">기본</span></b><p>프로젝트 일정, 담당자 등이 섞인 텍스트를 클릭 한 번으로 업무 분장표로 정리</p><div class="tools"><span>Notion AI</span><span>ChatGPT</span></div></div></li>
@@ -809,7 +831,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
             <li><span class="n">11</span><div><b>한눈에 보이는 업무: 복잡한 프로세스 다이어그램 그리기<span class="tier">확장</span></b><p>설명하기 어려운 업무 절차나 구조를 AI가 시각적 도표로 자동 생성</p><div class="tools"><span>Napkin.ai</span><span>ChatGPT</span></div></div></li>
             <li><span class="n">12</span><div><b>주관식 답변의 공포 탈출: 수천 건의 설문 자동 분석<span class="tier">확장</span></b><p>고객 만족도나 사내 투표의 주관식 텍스트를 AI가 카테고리별로 요약 및 통계</p><div class="tools"><span>Gemini</span><span>ChatGPT</span></div></div></li>
             <li><span class="n">13</span><div><b>회의록의 혁신: 녹음만 하면 결과 보고서까지 자동 완성<span class="tier">확장</span></b><p>클로바노트 등 STT 텍스트를 활용해 실행 과제가 포함된 정식 회의록 생성</p><div class="tools"><span>Claude</span><span>NotebookLM</span></div></div></li>
-          </ul>
+            </ul>
+          </div>
         </div>
         <div class="case-tools">
           <div class="ct-lab">사용 도구</div>
