@@ -410,6 +410,7 @@ footer{background:#16234A;color:#8B99BE;font-size:12.5px;text-align:center;paddi
 .claim-proof p::before{content:"\201C";color:var(--gold);margin-right:1px}
 .claim-proof p::after{content:"\201D";color:var(--gold);margin-left:1px}
 .claim-proof cite{display:block;margin-top:9px;font-style:normal;font-size:12.5px;color:var(--gray)}
+.case-quote{margin:20px 0 0}
 
 /* ---------- 모션 ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
@@ -479,20 +480,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
     <div class="reveal">
       <span class="eyebrow">About</span>
       <h2>AI를 '가르치는' 강사가 아니라,<br>AI로 '만드는' 강사입니다</h2>
-      <blockquote class="claim-proof">
-        <span class="tag">수강생의 증언</span>
-        <p>AI를 소비하는 사람에서 AI로 생산하는 사람이 됐습니다</p>
-        <cite>— 8회차 24시간 AI 과정 수료생</cite>
-      </blockquote>
       <p class="lead">19년의 HRD·커리어 컨설팅 경험 위에 자체 방법론과 직접 개발한 도구를 얹어, 배우는 데서 끝나지 않고 실무에 적용되는 교육을 만듭니다.</p>
       <div class="cred">
         <div class="row"><span class="dot"></span><div><b>19년+ HRD · 커리어 컨설팅 경력</b><p>현대엔지니어링 · 롯데쇼핑 · 코레일유통 등 대기업 현장 출신 교육과 실무를 모두 아는 강사</p></div></div>
         <div class="row"><span class="dot"></span><div><b>AI Learning Loop 자체 방법론</b><p>'배우고 → 만들고 → 적용하는' 순환 구조로 설계한 자체 AI 학습 방법론</p></div></div>
-        <div class="row"><span class="dot"></span><div><b>코칭 기반 퍼실리테이션 (ICF PCC · KPC · EMCC)</b><p>국제코칭연맹 ICF PCC · 한국코치협회 KPC · 유럽멘토링코칭협회 EMCC 인증 코치. 일방향 강의가 아닌, 질문과 실습으로 행동 변화를 이끄는 진행</p></div></div>
-        <div class="row"><span class="dot"></span><div><b>인공지능교육 지도사</b><p>한국산업인력공단 디지털원격훈련 아카이브 AI분야 훈련강사 등재</p></div></div>
-        <div class="row"><span class="dot"></span><div><b>KG에듀원 디지털원격훈련 아카이브 (2026)</b><p>고용노동부·한국산업인력공단 주관 사업. AI분야 과정 기획 · 운영 · 강의 전 과정 참여<br><span class="wip">사업 소개 보도 · <a href="https://v.daum.net/v/20260212102944107" target="_blank" rel="noopener">이데일리 2026.2.12</a></span></p></div></div>
-        <div class="row"><span class="dot"></span><div><b>경희대학교 석사 졸업 · 박사과정 재학</b><!-- TODO: 석사·박사 전공 확인 필요 (확인되면 <p>전공명</p> 추가) --></div></div>
-        <div class="row"><span class="dot"></span><div><b>저서 2권 · 논문</b><p><a href="https://product.kyobobook.co.kr/detail/S000219855375" target="_blank" rel="noopener">『스스로 움직이는 팀』</a>(2026) · 『올 어바웃 커리어』(2022)<br><span class="wip">『현장이 말하게 하라』(공저) 집필 중</span><br>석사학위논문 「코칭리더십이 셀프리더십을 매개로 조직몰입에 미치는 영향: 조직지원인식 및 조직자아존중감의 조절효과」</p></div></div>
+        <div class="row"><span class="dot"></span><div><b>코칭 기반 퍼실리테이션</b><p>ICF PCC · KPC · EMCC 인증 코치. 질문과 실습으로 행동 변화를 이끄는 진행</p></div></div>
+        <div class="row"><span class="dot"></span><div><b>고용노동부 AI분야 훈련강사</b><p>한국산업인력공단 디지털원격훈련 아카이브 등재. KG에듀원 AI분야 과정 기획 · 운영 · 강의 전 과정 참여 (2026)<br><span class="wip">사업 소개 보도 · <a href="https://v.daum.net/v/20260212102944107" target="_blank" rel="noopener">이데일리 2026.2.12</a></span></p></div></div>
+        <div class="row"><span class="dot"></span><div><b>저서 2권 · 경희대 박사과정</b><p><a href="https://product.kyobobook.co.kr/detail/S000219855375" target="_blank" rel="noopener">『스스로 움직이는 팀』</a>(2026) · 『올 어바웃 커리어』(2022)<br><span class="wip">『현장이 말하게 하라』(공저) 집필 중</span></p></div></div>
       </div>
     </div>
   </div>
@@ -537,10 +531,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
       <div class="case-inner">
         <p class="case-course">AI 기반 업무 자동화 및 데이터 활용 실무 (농림축산식품부 실무자)</p>
       <div class="case-body">
-        <div class="rail">
+        <div>
+          <div class="rail">
           <div class="step s1"><div class="lab">특이점</div><p>단발 특강이 아닌 8회차 24시간 장기 과정. 회차 간 학습이 끊기지 않아야 하고, 교육이 끝난 뒤 실제 행정 업무에 적용되는 수준까지 도달해야 하는 설계 난이도.</p></div>
           <div class="step s2"><div class="lab">대처</div><p>전 회차 PPT·노션 교재·실습 워크시트를 통일된 디자인 시스템으로 풀패키지 자체 제작. 공공 실무 맥락의 데이터로 실습을 구성해 '배운 것 = 내 업무'가 되도록 연결.</p></div>
           <div class="step s3"><div class="lab">결과물</div><p>24시간 커리큘럼 전체 교보재 패키지 완성, 실무자들이 자기 업무 자동화 산출물을 직접 제작하며 과정 수료.</p></div>
+          </div>
+          <blockquote class="claim-proof case-quote">
+            <span class="tag">수강생의 증언</span>
+            <p>AI를 소비하는 사람에서 AI로 생산하는 사람이 됐습니다</p>
+            <cite>— 8회차 24시간 AI 과정 수료생</cite>
+          </blockquote>
         </div>
         <div>
           <figure class="photo-slot photo-case filled" data-slot="case-nongsik">
