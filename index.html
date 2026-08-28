@@ -211,6 +211,18 @@ summary.case-head:focus-visible{outline:2px solid var(--gold);outline-offset:6px
 .case-ref{margin-top:9px;font-size:12.5px;color:#93A3BF;word-break:keep-all}
 .case-ref a{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--gold-soft);transition:color .2s ease,border-color .2s ease}
 .case-ref a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.case-curric{margin-top:24px;padding-top:18px;border-top:1px dashed var(--line)}
+.case-curric .cc-lab{font-size:12.5px;font-weight:700;letter-spacing:.14em;color:var(--gold);margin-bottom:4px}
+.case-curric .cc-sub{font-size:12.5px;color:#93A3BF;margin-bottom:14px;word-break:keep-all}
+.curric{display:grid;gap:13px}
+.curric li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;list-style:none}
+.curric .n{font-size:12px;font-weight:700;color:var(--sky);padding-top:3px;font-variant-numeric:tabular-nums}
+.curric b{display:block;font-size:14px;font-weight:700;word-break:keep-all;margin-bottom:3px}
+.curric .tier{margin-left:7px;font-size:10.5px;font-weight:700;letter-spacing:.08em;color:#A8B5CC}
+.curric p{font-size:13px;color:var(--gray);word-break:keep-all}
+.curric .tools{margin-top:7px;display:flex;flex-wrap:wrap;gap:6px}
+.curric .tools span{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:100px;padding:2px 9px;font-size:11px;font-weight:700;line-height:1.6}
+@media(max-width:600px){.curric li{grid-template-columns:24px 1fr;gap:9px}}
 @keyframes caseOpen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 .case[open] .case-inner{animation:caseOpen .3s ease}
 @media(prefers-reduced-motion:reduce){.case[open] .case-inner{animation:none}}
@@ -773,7 +785,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
     <details class="case reveal">
       <summary class="case-head">
         <div><div class="case-no">CASE 9</div><h3>온라인 AI 기초 과정</h3><p class="sub">강의 영상을 직접 촬영해 제작, 다수 기수 평가·피드백까지 운영</p></div>
-        <div class="meta"><span>고용노동부 사업</span><span>영상 촬영</span><span>다수 기수</span><span>온라인</span><span>평가·피드백 운영</span></div>
+        <div class="meta"><span>고용노동부 사업</span><span>AI 스마트 워크 모듈</span><span>영상 촬영</span><span>다수 기수</span><span>온라인</span><span>평가·피드백 운영</span></div>
         <span class="case-more"><b class="o">자세히 보기</b><b class="c">접기</b></span>
       </summary>
       <div class="case-inner">
@@ -786,9 +798,22 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
             <div class="step s3"><div class="lab">결과물</div><p>기수가 바뀌어도 그대로 재사용되는 영상 강의 콘텐츠 확보. 여기에 일관된 평가 기준과 수강생별 상세 피드백을 결합해, 사전 제작 영상 과정에서도 개별 지도가 이뤄지도록 구성.</p></div>
           </div>
         </div>
+        <div class="case-curric">
+          <div class="cc-lab">담당 차시</div>
+          <div class="cc-sub">M2. AI 스마트 워크 · 기본 3차시 + 확장 4차시</div>
+          <ul class="curric">
+            <li><span class="n">07</span><div><b>내 PC의 똑똑한 서재: 수만 장의 PDF 한눈에 파악하기<span class="tier">기본</span></b><p>NotebookLM에 사내 규정, 매뉴얼을 넣고 필요한 정보만 즉시 찾아내기</p><div class="tools"><span>NotebookLM</span></div></div></li>
+            <li><span class="n">08</span><div><b>틀린 그림 찾기: 수십 장의 보고서 차이점 10초 분석<span class="tier">기본</span></b><p>신구 대조표 작성 없이, 두 문서의 변경 사항과 핵심 이슈를 자동 비교</p><div class="tools"><span>NotebookLM</span><span>Claude</span></div></div></li>
+            <li><span class="n">09</span><div><b>줄글의 마법: 뒤섞인 업무 메모를 깔끔한 표로 변환<span class="tier">기본</span></b><p>프로젝트 일정, 담당자 등이 섞인 텍스트를 클릭 한 번으로 업무 분장표로 정리</p><div class="tools"><span>Notion AI</span><span>ChatGPT</span></div></div></li>
+            <li><span class="n">10</span><div><b>문서의 품격: 메모 한 줄로 완성하는 정식 공문서<span class="tier">확장</span></b><p>대충 적은 아이디어를 대외 발송용 공문, 협조전, 기획서 양식으로 즉시 업그레이드</p><div class="tools"><span>Claude</span><span>ChatGPT</span></div></div></li>
+            <li><span class="n">11</span><div><b>한눈에 보이는 업무: 복잡한 프로세스 다이어그램 그리기<span class="tier">확장</span></b><p>설명하기 어려운 업무 절차나 구조를 AI가 시각적 도표로 자동 생성</p><div class="tools"><span>Napkin.ai</span><span>ChatGPT</span></div></div></li>
+            <li><span class="n">12</span><div><b>주관식 답변의 공포 탈출: 수천 건의 설문 자동 분석<span class="tier">확장</span></b><p>고객 만족도나 사내 투표의 주관식 텍스트를 AI가 카테고리별로 요약 및 통계</p><div class="tools"><span>Gemini</span><span>ChatGPT</span></div></div></li>
+            <li><span class="n">13</span><div><b>회의록의 혁신: 녹음만 하면 결과 보고서까지 자동 완성<span class="tier">확장</span></b><p>클로바노트 등 STT 텍스트를 활용해 실행 과제가 포함된 정식 회의록 생성</p><div class="tools"><span>Claude</span><span>NotebookLM</span></div></div></li>
+          </ul>
+        </div>
         <div class="case-tools">
           <div class="ct-lab">사용 도구</div>
-          <div class="ct-list"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Notion</span><span>CLOVA Note</span></div>
+          <div class="ct-list"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>NotebookLM</span><span>Notion AI</span><span>Napkin.ai</span><span>CLOVA Note</span></div>
         </div>
       </div>
     </details>
