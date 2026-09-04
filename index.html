@@ -227,6 +227,35 @@ summary.case-head:focus-visible{outline:2px solid var(--gold);outline-offset:6px
 .cc-group{margin-top:22px}
 .cc-group:first-of-type{margin-top:0}
 .cc-group > .g{font-size:12.5px;font-weight:700;color:var(--sky);margin-bottom:12px;word-break:keep-all}
+/* 커리큘럼 접이식 */
+details.curric-fold > summary.cc-head{
+  display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;
+  cursor:pointer;list-style:none;
+}
+details.curric-fold > summary.cc-head::-webkit-details-marker{display:none}
+details.curric-fold > summary.cc-head::marker{content:""}
+details.curric-fold .cc-sub{margin-bottom:0}
+details.curric-fold summary.cc-head:hover .cc-lab{color:var(--blue)}
+details.curric-fold summary.cc-head:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:8px}
+.cc-more{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;
+  font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--gold);transition:color .2s ease;
+}
+details.curric-fold summary.cc-head:hover .cc-more{color:var(--blue)}
+.cc-more::after{
+  content:"";flex:0 0 auto;width:7px;height:7px;
+  border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+  transform:translateY(-2px) rotate(45deg);transition:transform .25s ease;
+}
+details.curric-fold[open] .cc-more::after{transform:translateY(1px) rotate(-135deg)}
+.cc-more .c{display:none}
+details.curric-fold[open] .cc-more .o{display:none}
+details.curric-fold[open] .cc-more .c{display:inline}
+.cc-body{margin-top:18px}
+@media(max-width:600px){
+  details.curric-fold > summary.cc-head{min-height:44px}
+  .cc-more{width:100%;justify-content:flex-start}
+}
 @media(max-width:600px){.curric li{grid-template-columns:22px 1fr;gap:9px}}
 @keyframes caseOpen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 .case[open] .case-inner{animation:caseOpen .3s ease}
@@ -617,9 +646,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
             <div class="photo-cap">국토교통인재개발원 강의 현장</div>
           </div>
         </div>
-        <div class="case-curric">
-          <div class="cc-lab">하루 구조</div>
-          <div class="cc-sub">디자인씽킹 두 바퀴 — 오전에 내 자리에서, 오후에 반대편 자리에서 같은 문제를 다시</div>
+        <details class="case-curric curric-fold">
+          <summary class="cc-head">
+            <div>
+              <div class="cc-lab">하루 구조</div>
+              <div class="cc-sub">디자인씽킹 두 바퀴 — 오전에 내 자리에서, 오후에 반대편 자리에서 같은 문제를 다시</div>
+            </div>
+            <span class="cc-more"><b class="o">펼쳐 보기</b><b class="c">접기</b></span>
+          </summary>
+          <div class="cc-body">
           <div class="cc-group">
             <div class="g">오전 · 내 자리에서 본 문제</div>
             <ul class="curric">
@@ -659,7 +694,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
               <li><span class="dot"></span><div><b>슬라이드</b><p>강의용</p></div></li>
             </ul>
           </div>
-        </div>
+          </div>
+        </details>
         <div class="case-tools">
           <div class="ct-lab">사용 도구</div>
           <div class="ct-list"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>디자인씽킹 5단계</span><span>SCAMPER</span><span>프롬프트 카드(웹)</span></div>
