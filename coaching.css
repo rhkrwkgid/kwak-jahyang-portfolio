@@ -125,11 +125,11 @@
 
 /* 현장 사진 갤러리 */
 .coach #gallery{background:#fff}
-.coach-gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
-.coach-gallery .g-item{margin:0;border-radius:18px;overflow:hidden;background:var(--panel);aspect-ratio:2/1}
-.coach-gallery .g-item:first-child{grid-column:1/-1;aspect-ratio:2.14/1}
-.coach-gallery .g-item img{width:100%;height:100%;object-fit:cover;display:block}
-@media(max-width:760px){.coach-gallery{grid-template-columns:1fr;gap:10px}}
+.coach-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}
+.coach-gallery .g-item{display:block;border-radius:14px;overflow:hidden;background:var(--panel);aspect-ratio:3/2}
+.coach-gallery .g-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.coach-gallery .g-item:hover img{transform:scale(1.04)}
+@media(max-width:760px){.coach-gallery{grid-template-columns:1fr 1fr;gap:8px}}
 
 /* 이력 */
 .also-cert{margin-top:16px;padding:16px 20px;border-radius:20px;background:var(--panel)}
