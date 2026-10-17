@@ -95,11 +95,13 @@
 .coach #book{background:var(--bg)}
 .book-grid{display:grid;grid-template-columns:260px 1fr;gap:56px;align-items:center}
 @media(max-width:760px){.book-grid{grid-template-columns:1fr;gap:36px}.book-cover{max-width:200px}}
-.book-cover{aspect-ratio:3/4.3;border-radius:6px 14px 14px 6px;background:linear-gradient(135deg,var(--blue) 0%,#3E5B45 100%);box-shadow:-6px 0 0 #2F4535 inset,0 18px 40px rgba(47,58,51,.22);padding:28px 24px;color:#fff}
-.bc-inner{height:100%;display:flex;flex-direction:column;justify-content:space-between}
-.bc-inner b{font-size:30px;line-height:1.3;font-weight:700}
-.bc-k{font-size:12px;letter-spacing:.2em;color:var(--gold-soft)}
-.bc-a{font-size:14px;color:#DCE5D7}
+.book-cover{margin:0;border-radius:4px 10px 10px 4px;overflow:hidden;box-shadow:0 18px 40px rgba(47,58,51,.22)}
+.book-cover img{width:100%;display:block}
+.book-sub{font-size:17px;font-weight:700;color:var(--blue);margin:-2px 0 6px}
+.award{display:flex;gap:14px;align-items:center;margin:4px 0 18px;padding:14px 18px;border-radius:16px;background:#fff;border:1px solid var(--gold-soft)}
+.award .aw-k{flex:0 0 auto;font-size:11px;font-weight:700;letter-spacing:.18em;color:#fff;background:var(--gold);border-radius:100px;padding:4px 10px}
+.award p{font-size:13.5px;color:var(--gray);line-height:1.6}
+.award p b{color:var(--ink);font-size:14.5px}
 .book-meta{color:var(--gray);font-size:14px;margin:-4px 0 16px}
 .book-actions{margin-top:22px}
 .coach .btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;border-radius:100px;padding:10px 22px;font-size:14px;font-weight:700;transition:.2s}
@@ -107,3 +109,56 @@
 .book-also{margin-top:28px;padding-top:18px;border-top:1px dashed var(--line)}
 .book-also b{font-size:13px;color:var(--gold);letter-spacing:.06em}
 .book-also p{font-size:14px;color:var(--gray);margin-top:4px}
+
+/* 코칭 자격 발급 기관 */
+.cert{list-style:none;margin-top:10px;display:grid;gap:6px}
+.cert li{font-size:13px;color:var(--gray);display:flex;gap:10px;align-items:baseline}
+.cert li b{display:inline-block;flex:0 0 62px;font-size:12px;letter-spacing:.06em;color:var(--blue)}
+
+/* 코칭 과정 목록 */
+.prog-list{display:grid;gap:14px;margin-top:36px}
+.prog{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 26px}
+.prog .pg-main b{display:block;font-size:18px}
+.prog .pg-main p{font-size:14px;color:var(--gray);margin-top:2px}
+.prog .pg-meta{display:flex;flex-wrap:wrap;gap:8px}
+.prog .pg-meta span{background:var(--blue);color:#fff;border-radius:100px;padding:6px 14px;font-size:12.5px;font-weight:700}
+
+/* 현장 사진 갤러리 */
+.coach #gallery{background:#fff}
+.coach-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+@media(max-width:760px){.coach-gallery{grid-template-columns:1fr 1fr;gap:10px}}
+.coach-gallery .photo-slot{aspect-ratio:4/3;border-radius:18px}
+.coach-gallery .photo-slot img{width:100%;height:100%;object-fit:cover}
+
+/* 이력 */
+.also-cert{margin-top:16px;padding:16px 20px;border-radius:20px;background:var(--panel)}
+.also-cert b{font-size:13px;color:var(--gold);letter-spacing:.06em}
+.also-cert p{font-size:13.5px;color:var(--gray);margin-top:4px}
+.prog-list{grid-template-columns:1fr 1fr}
+@media(max-width:760px){.prog-list{grid-template-columns:1fr}}
+.prog{padding:18px 22px}
+.prog .pg-main b{font-size:16px}
+.sub-h{font-size:20px;font-weight:700;margin:56px 0 20px}
+.years{display:grid;gap:14px}
+.yr{display:grid;grid-template-columns:110px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 22px}
+@media(max-width:600px){.yr{grid-template-columns:1fr;gap:6px}}
+.yr-k{font-size:18px;font-weight:700;color:var(--blue)}
+.yr ul{list-style:none;columns:2;column-gap:28px}
+@media(max-width:860px){.yr ul{columns:1}}
+.yr li{font-size:13.5px;color:#4A5149;padding:3px 0 3px 14px;position:relative;break-inside:avoid}
+.yr li::before{content:"";position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--sky)}
+.more-years{margin-top:14px}
+.more-years summary{cursor:pointer;list-style:none;font-size:13.5px;font-weight:700;color:var(--gold);padding:8px 2px}
+.more-years summary::-webkit-details-marker{display:none}
+.more-years summary::after{content:" ▾"}
+.more-years[open] summary::after{content:" ▴"}
+.more-years .years{margin-top:10px}
+.orgs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+@media(max-width:760px){.orgs{grid-template-columns:1fr}}
+.org{background:var(--panel);border-radius:18px;padding:18px 22px}
+.org b{font-size:14px}
+.org p{font-size:13px;color:var(--gray);margin-top:6px}
+.career{list-style:none;display:grid;gap:10px}
+.career li{display:grid;grid-template-columns:130px 1fr;gap:14px;font-size:14px;color:#4A5149;padding:10px 0;border-bottom:1px dashed var(--line)}
+.career li span{font-weight:700;color:var(--blue)}
+@media(max-width:600px){.career li{grid-template-columns:1fr;gap:2px}}
