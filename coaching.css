@@ -1,0 +1,99 @@
+/* 코칭·리더십 페이지 전용 테마: style.css 위에 덮어씀
+   AI 페이지의 블루·테크 톤 대신 세이지 그린·크림·테라코타의 따뜻한 대화 톤 */
+:root{
+  --ink:#2F3A33;        /* 딥 포레스트 */
+  --blue:#4F6F57;       /* 딥 세이지 */
+  --sky:#7E9C83;        /* 세이지 */
+  --gold:#C0805A;       /* 테라코타 */
+  --gold-soft:#E8C3A6;
+  --bg:#FBF8F3;         /* 크림 */
+  --panel:#F3EEE6;
+  --panel2:#ECE5DA;
+  --line:#E5DCCF;
+  --gray:#6B6A63;
+}
+body.coach{font-family:'Noto Sans KR',sans-serif;font-weight:400;line-height:1.8}
+.coach h1,.coach h2,.coach h3,.coach h4,
+.coach .brand,.coach .stats .num,.coach .contact .name,.coach .hero .who strong,
+.coach .claim-proof p{font-family:'Gowun Batang',serif;letter-spacing:-0.01em}
+.coach h2{font-weight:700}
+.coach .eyebrow{letter-spacing:.16em;font-weight:700;color:var(--gold)}
+.coach .brand em{font-family:'Noto Sans KR',sans-serif;color:var(--sky)}
+
+/* 헤더 */
+.coach header{background:rgba(251,248,243,.88)}
+.coach .nav a.switch{border-color:var(--sky)}
+.coach .nav a.switch:hover{background:var(--blue);border-color:var(--blue)}
+
+/* 히어로: 아치형 사진 + 동심원(대화의 파문) 모티프 */
+.coach .hero{padding:96px 0 104px;background:linear-gradient(160deg,#FFFDF9 0%,var(--bg) 50%,#F1ECE2 100%)}
+.coach .hero::before{
+  background:
+    radial-gradient(circle at 82% 30%,rgba(126,156,131,.20) 0,rgba(126,156,131,.20) 140px,transparent 141px),
+    radial-gradient(circle at 12% 92%,rgba(192,128,90,.12) 0,rgba(192,128,90,.12) 110px,transparent 111px);
+}
+.coach .hero::after{
+  background:
+    radial-gradient(circle at 82% 30%,transparent 200px,rgba(126,156,131,.35) 201px,transparent 202px),
+    radial-gradient(circle at 82% 30%,transparent 260px,rgba(192,128,90,.28) 261px,transparent 262px);
+}
+.hero-grid{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:40px}.hero-photo{max-width:240px}}
+.hero-photo{
+  margin:0;aspect-ratio:3/4;border-radius:999px 999px 24px 24px;overflow:hidden;
+  border:6px solid #fff;box-shadow:0 18px 48px rgba(47,58,51,.14);background:var(--panel);
+}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.coach .hero .kicker{color:var(--sky);letter-spacing:.22em}
+.coach .hero h1{font-weight:700;line-height:1.35}
+.coach .hero h1 .u{box-shadow:none;color:var(--blue);font-style:normal;border-bottom:3px solid var(--gold-soft)}
+.coach .chip{border-color:var(--line);box-shadow:none;background:rgba(255,255,255,.8);font-weight:500}
+.coach .chip b{color:var(--gold)}
+
+/* 소개: 사진 없이 한 단, 인용 강조 */
+.coach #about .about-wrap{max-width:820px}
+.coach .cred{grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.coach .cred{grid-template-columns:1fr}}
+.coach .cred .row{border-radius:20px;border-color:var(--line);background:#fff}
+.coach .cred .dot{background:var(--sky)}
+.coach .claim-proof{border-left-color:var(--sky);border-radius:20px}
+.coach .claim-proof .tag{color:var(--gold)}
+.coach .claim-proof p{font-weight:700}
+
+/* 숫자: 어두운 띠 대신 밝은 세이지 띠 */
+.coach .stats{background:#E9EEE6;color:var(--ink)}
+.coach .stats .num{color:var(--blue)}
+.coach .stats .num small{color:var(--gold)}
+.coach .stats .lab{color:var(--gray)}
+
+/* 접근 방식 카드 */
+.coach .frame-card{border-radius:24px;background:#fff;border-color:var(--line)}
+.coach .fc-1 .tag{color:var(--gold)} .coach .fc-2 .tag{color:var(--sky)} .coach .fc-3 .tag{color:var(--blue)}
+
+/* 사례 */
+.coach #cases{background:linear-gradient(180deg,var(--bg) 0%,#F4EFE7 100%)}
+.coach .case{border-radius:28px;box-shadow:0 8px 30px rgba(47,58,51,.06)}
+.coach .case .meta span{background:var(--blue)}
+.coach .case.pending{background:linear-gradient(150deg,#fff 0%,var(--panel) 100%)}
+.coach .case.pending .meta span{background:var(--panel2);color:var(--gray)}
+.coach .step p{color:#4A5149}
+.coach .photo-slot{border-color:#D9CCB9;color:#A8987F}
+.coach .photo-slot svg{stroke:#C2B39C}
+.coach .photo-case{border-radius:20px}
+
+/* 도구 */
+.coach #tools{background:#F4EFE7}
+.coach .tool{border-radius:20px}
+.coach .tool .gl{background:var(--sky);width:22px;height:22px;border-radius:50%;opacity:.35}
+
+/* 문의 */
+.coach .contact{background:var(--ink)}
+.coach .contact .lead,.coach .contact .role{color:#C9D3C8}
+.coach .contact .line{background:var(--gold-soft)}
+.coach .contact .ways a:hover{border-color:var(--gold-soft)}
+.coach footer{background:#232C26;color:#9AA597}
+@media(max-width:860px){
+  /* 모바일에서는 파문 모티프를 사진 쪽(아래)으로 옮겨 글자와 겹치지 않게 */
+  .coach .hero::before{background:radial-gradient(circle at 70% 84%,rgba(126,156,131,.20) 0,rgba(126,156,131,.20) 120px,transparent 121px)}
+  .coach .hero::after{background:radial-gradient(circle at 70% 84%,transparent 170px,rgba(126,156,131,.35) 171px,transparent 172px)}
+}
