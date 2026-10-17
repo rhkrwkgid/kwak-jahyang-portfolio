@@ -114,3 +114,18 @@
 .cert{list-style:none;margin-top:10px;display:grid;gap:6px}
 .cert li{font-size:13px;color:var(--gray);display:flex;gap:10px;align-items:baseline}
 .cert li b{display:inline-block;flex:0 0 62px;font-size:12px;letter-spacing:.06em;color:var(--blue)}
+
+/* 코칭 과정 목록 */
+.prog-list{display:grid;gap:14px;margin-top:36px}
+.prog{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 26px}
+.prog .pg-main b{display:block;font-size:18px}
+.prog .pg-main p{font-size:14px;color:var(--gray);margin-top:2px}
+.prog .pg-meta{display:flex;flex-wrap:wrap;gap:8px}
+.prog .pg-meta span{background:var(--blue);color:#fff;border-radius:100px;padding:6px 14px;font-size:12.5px;font-weight:700}
+
+/* 현장 사진 갤러리 */
+.coach #gallery{background:#fff}
+.coach-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+@media(max-width:760px){.coach-gallery{grid-template-columns:1fr 1fr;gap:10px}}
+.coach-gallery .photo-slot{aspect-ratio:4/3;border-radius:18px}
+.coach-gallery .photo-slot img{width:100%;height:100%;object-fit:cover}
