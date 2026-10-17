@@ -455,3 +455,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 /* ---------- 준비 중 사례 ---------- */
 .case.pending{border-style:dashed;box-shadow:none;background:linear-gradient(150deg,var(--white) 0%,var(--panel) 100%)}
 .case.pending .meta span{background:var(--panel2);color:var(--gray)}
+/* 기타 사례: 짧은 특강·워크숍 묶음 */
+.etc-list{display:grid;gap:0;margin-top:8px;list-style:none}
+.etc-item{padding:22px 0;border-top:1px dashed var(--line)}
+.etc-item:first-child{border-top:0;padding-top:12px}
+.etc-item .etc-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:8px}
+.etc-item h4{font-size:17px;font-weight:700;color:var(--ink);word-break:keep-all}
+.etc-item .etc-course{font-size:13px;color:var(--gray);word-break:keep-all}
+.etc-item .etc-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.etc-item .etc-meta span{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:100px;padding:3px 11px;font-size:12px;font-weight:700}
+.etc-item p{font-size:14.5px;color:#3C4660;word-break:keep-all}
