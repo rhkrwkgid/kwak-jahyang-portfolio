@@ -146,3 +146,13 @@
 .org{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 22px}
 .org b{font-size:13px;letter-spacing:.06em;color:var(--gold)}
 .org p{font-size:14px;color:#4A5149;margin-top:8px;line-height:1.9}
+
+/* 소개 카드: 태그 + 제목 + 항목 목록 */
+.cred-list .row{padding:24px 26px;align-items:flex-start}
+.cred-list .row>div{width:100%}
+.cl-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--gold);margin-bottom:6px}
+.cred-list .row>div>b{font-size:16.5px;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--line)}
+.kv{list-style:none;display:grid;gap:8px}
+.kv li{display:grid;grid-template-columns:68px 1fr;gap:12px;align-items:baseline;font-size:13.5px;color:var(--gray);line-height:1.6}
+.kv li b{display:block;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--blue);white-space:nowrap}
+.kv li span,.cred-list .row>div>b{word-break:keep-all}
