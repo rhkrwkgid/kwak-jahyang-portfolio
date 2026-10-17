@@ -138,27 +138,9 @@
 @media(max-width:760px){.prog-list{grid-template-columns:1fr}}
 .prog{padding:18px 22px}
 .prog .pg-main b{font-size:16px}
-.sub-h{font-size:20px;font-weight:700;margin:56px 0 20px}
-.years{display:grid;gap:14px}
-.yr{display:grid;grid-template-columns:110px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 22px}
-@media(max-width:600px){.yr{grid-template-columns:1fr;gap:6px}}
-.yr-k{font-size:18px;font-weight:700;color:var(--blue)}
-.yr ul{list-style:none;columns:2;column-gap:28px}
-@media(max-width:860px){.yr ul{columns:1}}
-.yr li{font-size:13.5px;color:#4A5149;padding:3px 0 3px 14px;position:relative;break-inside:avoid}
-.yr li::before{content:"";position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--sky)}
-.more-years{margin-top:14px}
-.more-years summary{cursor:pointer;list-style:none;font-size:13.5px;font-weight:700;color:var(--gold);padding:8px 2px}
-.more-years summary::-webkit-details-marker{display:none}
-.more-years summary::after{content:" ▾"}
-.more-years[open] summary::after{content:" ▴"}
-.more-years .years{margin-top:10px}
-.orgs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
-@media(max-width:760px){.orgs{grid-template-columns:1fr}}
-.org{background:var(--panel);border-radius:18px;padding:18px 22px}
-.org b{font-size:14px}
-.org p{font-size:13px;color:var(--gray);margin-top:6px}
-.career{list-style:none;display:grid;gap:10px}
-.career li{display:grid;grid-template-columns:130px 1fr;gap:14px;font-size:14px;color:#4A5149;padding:10px 0;border-bottom:1px dashed var(--line)}
-.career li span{font-weight:700;color:var(--blue)}
-@media(max-width:600px){.career li{grid-template-columns:1fr;gap:2px}}
+.sub-h{font-size:20px;font-weight:700;margin:56px 0 18px}
+.orgs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:860px){.orgs{grid-template-columns:1fr}}
+.org{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 22px}
+.org b{font-size:13px;letter-spacing:.06em;color:var(--gold)}
+.org p{font-size:14px;color:#4A5149;margin-top:8px;line-height:1.9}
