@@ -1,5 +1,5 @@
 /* 코칭·리더십 페이지 전용 테마: style.css 위에 덮어씀
-   AI 페이지의 블루·테크 톤 대신 세이지 그린·크림·테라코타의 따뜻한 대화 톤 */
+   AI 페이지의 블루·테크 톤 대신 세이지 그린·크림·테라코타의 따뜻한 대화 톤 (글꼴은 AI 페이지와 같은 G마켓 산스) */
 :root{
   --ink:#2F3A33;        /* 딥 포레스트 */
   --blue:#4F6F57;       /* 딥 세이지 */
@@ -12,13 +12,9 @@
   --line:#E5DCCF;
   --gray:#6B6A63;
 }
-body.coach{font-family:'Noto Sans KR',sans-serif;font-weight:400;line-height:1.8}
-.coach h1,.coach h2,.coach h3,.coach h4,
-.coach .brand,.coach .stats .num,.coach .contact .name,.coach .hero .who strong,
-.coach .claim-proof p{font-family:'Gowun Batang',serif;letter-spacing:-0.01em}
 .coach h2{font-weight:700}
 .coach .eyebrow{letter-spacing:.16em;font-weight:700;color:var(--gold)}
-.coach .brand em{font-family:'Noto Sans KR',sans-serif;color:var(--sky)}
+.coach .brand em{color:var(--sky)}
 
 /* 헤더 */
 .coach header{background:rgba(251,248,243,.88)}
