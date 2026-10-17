@@ -465,3 +465,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 .etc-item .etc-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
 .etc-item .etc-meta span{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:100px;padding:3px 11px;font-size:12px;font-weight:700}
 .etc-item p{font-size:14.5px;color:#3C4660;word-break:keep-all}
+.etc-item.has-thumb{display:grid;grid-template-columns:1fr 220px;gap:8px 28px;align-items:start}
+.etc-thumb{margin:0}
+.etc-thumb img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+@media (max-width:640px){.etc-item.has-thumb{grid-template-columns:1fr}}
