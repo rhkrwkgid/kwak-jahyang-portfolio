@@ -489,3 +489,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 .prog-page{padding-top:72px}
 .prog-btn{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:12px 22px;border-radius:999px;background:var(--ink);color:var(--white);font-weight:700;font-size:15px;text-decoration:none;transition:background .2s}
 .prog-btn:hover{background:var(--blue)}
+.cred a.prog-row{border:1px solid var(--ink);background:var(--ink);color:var(--white)}
+.cred a.prog-row b{color:var(--white)}
+.cred a.prog-row p{color:#C9D6EE}
+.cred a.prog-row:hover{background:var(--blue);border-color:var(--blue);color:var(--white)}
